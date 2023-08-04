@@ -37,3 +37,28 @@ pokemonRepository.add({
 });
 
 console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function(pokedexEntry, index){
+  //Add pokemon name and Index
+  document.write(`<b>${pokedexEntry.name}</b><br>`);
+
+  //Pokemon Height
+  document.write(`Height: ${pokedexEntry.height}`);
+
+  //big pokemon
+   if (pokedexEntry.height > 1) {
+    document.write(` - Wow that's big!`);
+  };
+
+  document.write(`<br>`);
+
+  //Add Pokemon type
+  document.write(`Type: ${pokedexEntry.type[0]}`);
+
+  //Second type if needed
+  if (pokedexEntry.type[1] !== undefined) {
+    document.write(` and ${pokedexEntry.type[1]}`);
+  };
+
+  document.write(`<br><br>`);
+});
