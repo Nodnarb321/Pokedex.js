@@ -12,33 +12,28 @@ let pokemonRepository = (function () {
   };
 })();
 
-let pokemonList = [
-  {
-    name: "Bulbasaur",
-    height:0.7,
-    type: ["grass", "poison"]
-  },
-  {
-    name: "Squirtle",
-    height:0.5, 
-    type: "water"
-  },
-  {
-    name: "Wartortle", 
-    height:1, 
-    type: "water"
-  },
-  {
-    name: "Blastoise", 
-    height:1.6, 
-    type: "water"
-  }
-];
+pokemonRepository.add({
+  name: "Bulbasaur",
+  height: 0.7,
+  type: ["grass", "poison"]
+});
 
-function pokemonFunction(pokemon) {
-  document.write (
-    '<br>'
-  )
-  document.write( pokemon.name + ' (Height: ' + pokemon.height + ') ');
-}
-pokemonList.forEach(pokemonFunction);
+pokemonRepository.add({
+  name: "Squirtle",
+  height: 0.5,
+  type: ["water"]
+});
+
+pokemonRepository.add({
+  name: "Wartortle",
+  height: 1,
+  type: ["water"]
+});
+
+pokemonRepository.add({
+  name: "Blastoise",
+  height: 1.6,
+  type: ["water"]
+});
+
+console.log(pokemonRepository.getAll());
