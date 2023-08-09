@@ -38,8 +38,8 @@ pokemonRepository.add({
 
 console.log(pokemonRepository.getAll());
 
-pokemonRepository.getAll().forEach(function(pokedexEntry, index){
-  //Add pokemon name and Index
+pokemonRepository.getAll().forEach(function(pokedexEntry){
+  //Add pokemon name
   document.write(`<b>${pokedexEntry.name}</b><br>`);
 
   //Pokemon Height
