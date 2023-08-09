@@ -1,5 +1,30 @@
+* {
+  font-family: cambria;
+  font-size: 18px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(113, 185, 113);
   color: black;
 }
 
+button {
+  background-color: white;
+  color: black;
+  width: 20%;
+  padding: 10px;
+  border: 2px black solid;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
