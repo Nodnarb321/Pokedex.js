@@ -57,28 +57,66 @@ let pokemonRepository = (function () {
 pokemonRepository.add({
   name: "Bulbasaur",
   height: 0.7,
-  type: ["grass", "poison"]
+  type: ["grass", "poison"],
+  url: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'
 });
 
 pokemonRepository.add({
   name: "Squirtle",
   height: 0.5,
-  type: ["water"]
+  type: ["water"],
+  url: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png'
 });
 
 pokemonRepository.add({
   name: "Wartortle",
   height: 1,
-  type: ["water"]
+  type: ["water"],
+  url: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png'
 });
 
 pokemonRepository.add({
   name: "Blastoise",
   height: 1.6,
-  type: ["water"]
+  type: ["water"],
+  url: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png'
 });
 
 //adding pokemon to list
-pokemonRepository.getAll().forEach(function (pokedexEntry, index) {
-  pokemonRepository.addListItem(pokedexEntry, index);
+pokemonRepository.getAll().forEach(function (pokedexEntry) {
+  pokemonRepository.addListItem(pokedexEntry);
 });
+
+//creating array of images
+let pokemonImgArray = [];
+
+//bulbasaur img
+const bulbasaur = new Image();
+bulbasaur.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png";
+
+//squirtle img
+const squirtle = new Image();
+squirtle.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png";
+
+//wartortle img
+const wartortle = new Image();
+wartortle.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png";
+
+//blastoise img
+const blastoise = new Image();
+blastoise.src = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png";
+
+//pushing each img to the array
+pokemonImgArray.push(bulbasaur);
+pokemonImgArray.push(squirtle);
+pokemonImgArray.push(wartortle);
+pokemonImgArray.push(blastoise);
+
+//sending images to the console
+console.log(pokemonImgArray);
+
+//sending images to the document
+document.body.appendChild(pokemonImgArray[0]);
+document.body.appendChild(pokemonImgArray[1]);
+document.body.appendChild(pokemonImgArray[2]);
+document.body.appendChild(pokemonImgArray[3]);
