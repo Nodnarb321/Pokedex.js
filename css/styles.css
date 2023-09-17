@@ -1,13 +1,31 @@
-* {
+
+ * {
   font-family: cambria;
   font-size: 18px;
   text-decoration: none;
   box-sizing: border-box;
 }
 
-body {
+.list-group-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+h1 {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+
+.page-container {
+  margin-top: 60px;
+}
+
+/* body {
   background-color: rgb(113, 185, 113);
   color: black;
+
 }
 
 h1 {
@@ -180,4 +198,4 @@ ul {
   li {
     padding: 6px 0;
   }
-}
+} */
