@@ -1,0 +1,1 @@
+Pokedex showing all pokemon from generations 1 through 9. Each tab shows seperate pokemon generations accordingly.
